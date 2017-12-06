@@ -3,10 +3,16 @@
 class CRM_Civicustomrel_Page_CstmRel extends CRM_Core_Page {
 
   public function run() {
-      $servername = "localhost";
-      $username = "rickbang_root";
-      $password = "23rickbang";
-      $dbname = "rickbang_ebspca_drupal";
+      $fileName = "/home/rickbanghart/dbconfig.csv";
+      $fh = fopen($fileName, 'r');
+      $last_error = error_get_last();
+      $dbParams = fgetcsv($fh);
+      fclose($fh);
+      $last_error = error_get_last();
+      $servername = $dbParams[0];
+      $username = $dbParams[1];
+      $password = $dbParams[2];
+      $dbname = $dbParams[3];
       print_r('Something to print');
       // Civi::log()->debug('An error message here');
 

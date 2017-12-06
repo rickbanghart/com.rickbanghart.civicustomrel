@@ -25,6 +25,7 @@ class CRM_Civicustomrel_Page_CstmRel extends CRM_Core_Page {
       }
       // Example: Set the page-title dynamically; alternatively, declare a static title in xml/Menu/*.xml
     CRM_Utils_System::setTitle(ts('Owners/Pets'));
+      
     $qry = "SELECT r.contact_id_a, r.contact_id_b, a.first_name as first_name, a.last_name as last_name, b.nick_name as pet_name,
       cv.breed_3 as breed 
       FROM civicrm_relationship r

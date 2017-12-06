@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/cstm-rel</path>
+    <page_callback>CRM_Civicustomrel_Page_CstmRel</page_callback>
+    <title>CstmRel</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/register-pet</path>
+    <page_callback>CRM_Civicustomrel_Form_RegisterPet</page_callback>
+    <title>RegisterPet</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

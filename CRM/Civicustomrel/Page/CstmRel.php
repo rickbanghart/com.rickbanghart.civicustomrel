@@ -5,7 +5,7 @@ class CRM_Civicustomrel_Page_CstmRel extends CRM_Core_Page {
   public function run() {
       $servername = "localhost";
       $username = "rickbang_root";
-      $password = "23rickbang";
+      $password = "********";
       $dbname = "rickbang_ebspca_drupal";
       print_r('Something to print');
       // Civi::log()->debug('An error message here');

@@ -7,19 +7,28 @@
  */
 class CRM_Civicustomrel_Form_RegisterPet extends CRM_Core_Form {
   public function buildQuickForm() {
-
+    $event = new CRM_Event_BAO_Event();
+    $events = $event->getEvents();
+      $props['field'] = 'Event';
+      $props['multiple'] = 0;
+    $options['1'] = 'Event 1';
+    $options['2'] = 'Event 2';
+      $props['options'] = $options;
+    $this->add('select', 'event', 'Event', $events, 0 , $props);
+    //$this->addSelect('Event');
     // add form elements
     $this->add(
-      'select', // field type
-      'favorite_color', // field name
-      'Favorite Color', // field label
-      $this->getColorOptions(), // list of options
+      'text', // field type
+      'first_name', // field name
+      'First Name', // field label
       TRUE // is required
     );
+    $this->add('text','last_name','Last Name',FALSE);
+    $this->add('text','pet_name','Pet Name');
     $this->addButtons(array(
       array(
         'type' => 'submit',
-        'name' => ts('Submit'),
+        'name' => ts('Register'),
         'isDefault' => TRUE,
       ),
     ));

@@ -13,6 +13,8 @@ class CRM_Civicustomrel_Page_CstmRel extends CRM_Core_Page {
       $username = $dbParams[1];
       $password = $dbParams[2];
       $dbname = $dbParams[3];
+      $this->
+      $values = $this->exportValues();
       print_r('Something to print');
       // Civi::log()->debug('An error message here');
 
